@@ -9,10 +9,10 @@ The ATLAS experiments being conducted at the Large Hadron Collider at CERN produ
 - [Test Set](https://github.com/asmitapoddar/Autoencoder-ATLAS/blob/master/processed_data/all_jets_test_4D_100_percent.pkl)
 
 ### The 4 Variables:
-- transverse momentum pT 
-- pseudorapidity η 
-- azimuthal angle φ 
-- energy E
+- *pt*: transverse momentum pT 
+- *eta*: pseudorapidity η 
+- *phi*: azimuthal angle φ 
+- *eta*: energy E
 
 ## Environment
 Python 3.5    
@@ -33,13 +33,20 @@ The Jupyter Notebook consist of the following modules:
 1. Loading the dataset.  
 The analysis has been done by preprocessing the data in two ways and comparing the results by auto-ecoding the two sets of preprocessed data. Preprocessing of the data:
 - Normalisation of data: Subtract the mean of the training set and divide by standard deviation of the training set. 
-- Custom standardisation 4 variables  in the following way:
-* m = log(m+1)/1.8 
-* pt = log(pt-1.3)/1.2 
-* phi = phi/3 
-* eta = eta/ 5 
+- Custom standardisation of 4 variables  in the following way:
+  - *m* = log(m+1)/1.8 
+  - *pt* = log(pt-1.3)/1.2 
+  - *phi* = phi/3 
+  - *eta* = eta/ 5 
 2. Histogram to visulaise the data distribution. 
-3. Load model and data as tensors
+3. Load model and data as tensors. 
+The model used is the [AE_3D_200](https://github.com/asmitapoddar/Autoencoder-ATLAS/blob/master/nn_utils.py).
+4. Reconstruction of the data using the auto encoder-decoder model. 
+The plots for both the reconstructed normalised as well as custom standardised data are shown.
+5. Reconstruction Loss (Residual).
+`Residual = (Predicted Data - Original Data) / Original Data`
+The plots for the residuals for both the reconstructed normalised as well as custom standardised data are shown.
+6. Correlations between the variables' residuals
 
 ## Usage
 
