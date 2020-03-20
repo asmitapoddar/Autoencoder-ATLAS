@@ -1,5 +1,4 @@
 # Autoencoder-ATLAS
-Autoencoder-ATLAS
 
 Here, you can find the codes for implementation of autoencoder-decoder network to compress the data from the ATLAS experiments from 4 to 3 variables, and reconstruct the same.
 
@@ -17,12 +16,15 @@ Python 3.5
 
 ## Dependencies  
 #### Python  
-- numpy    
-- sklearn    
+- numpy      
+- pandas 
+- matplotlib 
+- sys 
 - torch  
-- pandas  
-- math  
-- time   
+- fastai 
+- scipy 
+- seaborn
+- corner 
 
   
 The 4 variables standardised in the following way for the encoder-decoder network:
