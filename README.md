@@ -34,10 +34,10 @@ The Jupyter Notebook consist of the following modules:
 The analysis has been done by preprocessing the data in two ways and comparing the results by auto-ecoding the two sets of preprocessed data. Preprocessing of the data:
 - Normalisation of data: Subtract the mean of the training set and divide by standard deviation of the training set. 
 - Custom standardisation of 4 variables  in the following way:
-  - *m* = log(m+1)/1.8 
-  - *pt* = log(pt-1.3)/1.2 
-  - *phi* = phi/3 
-  - *eta* = eta/ 5 
+  - *m* = `log(m+1)/1.8`  
+  - *pt* = `log(pt-1.3)/1.`  
+  - *phi* = `phi/3`  
+  - *eta* = `eta/ 5`   
 2. Histogram to visulaise the data distribution. 
 3. Load model and data as tensors.  
 The model used is the [AE_3D_200](https://github.com/asmitapoddar/Autoencoder-ATLAS/blob/master/nn_utils.py). 
