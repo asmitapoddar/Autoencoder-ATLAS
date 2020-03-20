@@ -39,14 +39,28 @@ The analysis has been done by preprocessing the data in two ways and comparing t
   - *phi* = phi/3 
   - *eta* = eta/ 5 
 2. Histogram to visulaise the data distribution. 
-3. Load model and data as tensors. 
-The model used is the [AE_3D_200](https://github.com/asmitapoddar/Autoencoder-ATLAS/blob/master/nn_utils.py).
-4. Reconstruction of the data using the auto encoder-decoder model. 
-The plots for both the reconstructed normalised as well as custom standardised data are shown.
-5. Reconstruction Loss (Residual).
-`Residual = (Predicted Data - Original Data) / Original Data`
-The plots for the residuals for both the reconstructed normalised as well as custom standardised data are shown.
+3. Load model and data as tensors.  
+The model used is the [AE_3D_200](https://github.com/asmitapoddar/Autoencoder-ATLAS/blob/master/nn_utils.py). 
+4. Reconstruction of the data using the auto encoder-decoder model.  
+The plots for both the reconstructed normalised as well as custom standardised data are shown.  
+5. Reconstruction Loss (Residual).  
+`Residual = (Predicted Data - Original Data) / Original Data`  
+The plots for the residuals for both the reconstructed normalised as well as custom standardised data are shown.  
 6. Correlations between the variables' residuals
+The residual of *eta* and *pt* of the standardised data are nagatively correlated.
+
+# Analysis  
+The custom standardised variables have been reconstructed by the autoencoder-decoder model more faithfully than the normalised variables.  
+- Sum of absolute errors between original data and reconstructed data (on custom standardising the data):
+  - *m* : 4210.5957  
+  - *pt* : 1573.8503 
+  - *phi* : 415.63806
+  - *eta* : 2487.95 
+- Sum of absolute errors between original data and reconstructed data (on normalising the data):
+  - *m* : 1.154388e+10  
+  - *pt* : 180858.6   
+  - *phi* : 26188.15  
+  - *eta* : 62703.69  
 
 ## Usage
 
