@@ -35,7 +35,7 @@ The analysis has been done by preprocessing the data in two ways and comparing t
 - Normalisation of data: Subtract the mean of the training set and divide by standard deviation of the training set. 
 - Custom standardisation of 4 variables  in the following way:
   - *m* = `log(m+1)/1.8`  
-  - *pt* = `log(pt-1.3)/1.`  
+  - *pt* = `log(pt-1.3)/1.2`  
   - *phi* = `phi/3`  
   - *eta* = `eta/ 5`   
 2. Histogram to visulaise the data distribution. 
